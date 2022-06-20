@@ -17,3 +17,7 @@ type Usuario {
     perfil: Perfil
     status: UsuarioStatus
 }
+
+input UsuarioInput {
+    
+}
