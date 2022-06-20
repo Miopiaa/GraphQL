@@ -1,8 +1,16 @@
 type Mutation {
   # Virgula apcional
-  novoUsuario(nome: String, email: String, idade: Int): Usuario!
+  #Mutaion de usuario
+  novoUsuario(dados: UsuarioInput!): Usuario!
 
-  excluirUsuario(id: Int): Usuario
+  excluirUsuario(filtro: UsuarioFiltro!): Usuario
 
   alterarUsuario(id: Int, nome: String, email: String, idade: Int): Usuario
+
+  #Mutaion de Perfil
+  novoPerfil(dados: PerfilInput!): Perfil!
+
+  excluirPerfil(filtro: PerfilFiltro!): Perfil
+
+  alterarPerfil(id: Int, nome: String, email: String, idade: Int): Perfil
 }
